@@ -92,7 +92,7 @@ def Sentinel():
             Map.add_legend(legend_title=legend_title, legend_dict=legend_dict, layer_name='Kab. Purwakarta')
 
     with row1_col2:
-        selected_region = st.multiselect("Select a year", region)
+        selected_region = st.multiselect("Select region", region)
         add_legend = st.checkbox("Show legend")
 
     if selected_region:
