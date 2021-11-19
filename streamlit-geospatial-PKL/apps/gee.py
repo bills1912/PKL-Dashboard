@@ -222,7 +222,7 @@ def app():
 
     selected_app = st.selectbox("Select an app", apps)
 
-    if selected_app == "Remote Sensing Classification":
+    if selected_app == "Sentinel Imagery":
         Sentinel()
     else:
         Landsat()
