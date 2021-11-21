@@ -96,8 +96,7 @@ def Sentinel():
         add_legend = st.checkbox("Show legend")
 
     if selected_region:
-        for region in selected_region:
-            getRS(region)
+        getRS(region)
 
         if add_legend:
             getLegend(region)
