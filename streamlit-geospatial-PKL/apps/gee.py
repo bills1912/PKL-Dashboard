@@ -92,7 +92,7 @@ def Sentinel():
             Map.add_legend(legend_title=legend_title, legend_dict=legend_dict, layer_name='Kab. Purwakarta')
 
     with row1_col2:
-        selected_region = st.multiselect("Select region", region)
+        selected_region = st.selectbox("Select region", region)
         add_legend = st.checkbox("Show legend")
 
     if selected_region:
@@ -108,9 +108,6 @@ def Sentinel():
     else:
         with row1_col1:
             Map.to_streamlit(width=width, height=height)
-    
-    st.subheader("Confusion Matrix")
-    st.image("https://imgur.com/wQy0Vhz")
 
 def Landsat():
 
@@ -201,7 +198,7 @@ def Landsat():
             Map.add_legend(legend_title=legend_title, legend_dict=legend_dict, layer_name='Kab. Purwakarta')
 
     with row1_col2:
-        selected_region = st.multiselect("Select a year", region)
+        selected_region = st.selectbox("Select region", region)
         add_legend = st.checkbox("Show legend")
 
     if selected_region:
@@ -213,6 +210,8 @@ def Landsat():
 
         with row1_col1:
             Map.to_streamlit(width=width, height=height)
+        st.subheader("Confusion Matrix")
+        st.image("https://imgur.com/wQy0Vhz")
 
     else:
         with row1_col1:
