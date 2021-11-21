@@ -109,7 +109,7 @@ def Sentinel():
         if region == "Kab. Bandung Barat":
             st.image("https://i.ibb.co/wryCW52/CM.png")
         else:
-            pass
+            st.image("https://i.ibb.co/J7VmJxx/CM-Purwakarta-Sent2.png")
 
     else:
         with row1_col1:
