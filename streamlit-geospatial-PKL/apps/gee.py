@@ -104,6 +104,12 @@ def Sentinel():
 
         with row1_col1:
             Map.to_streamlit(width=width, height=height)
+        
+        st.subheader("Confusion Matrix")
+        if region == "Kab. Bandung Barat":
+            st.image("https://i.ibb.co/wryCW52/CM.png")
+        else:
+            pass
 
     else:
         with row1_col1:
@@ -210,8 +216,6 @@ def Landsat():
 
         with row1_col1:
             Map.to_streamlit(width=width, height=height)
-        st.subheader("Confusion Matrix")
-        st.image("https://imgur.com/wQy0Vhz")
 
     else:
         with row1_col1:
