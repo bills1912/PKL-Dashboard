@@ -41,7 +41,7 @@ def Sentinel():
 
             # Add the result of remote sensing classification map
             Map.addLayer(westBandung_raster, {'min': 0, 'max': 5,
-                                              'palette': ['#d6d6d6', '#fffd0e', '#d90ee1', '#40d808', '#276fff', '#c20000']},
+                                              'palette': ['#d63000', '#98ff00', '#0b4a8b' ,'#188700', '#00beff', '#bf04c2']},
                                               'Bandung Barat (Random Forest)')
         
         elif region == "Kab. Purwakarta":
@@ -65,30 +65,30 @@ def Sentinel():
 
             # Add the result of remote sensing classification map
             Map.addLayer(purwakarta_raster, {'min': 0, 'max': 5,
-                                             'palette': ['#ff9999', '#fbff95', '#9999ff' ,'#75bca4', '#99ffff', '#0c19ff']},
+                                             'palette': ['#d63000', '#98ff00', '#0b4a8b' ,'#188700', '#00beff', '#bf04c2']},
                                              'Purwakarta (Random Forest)')
         
     def getLegend(region):
         if region == "Kab. Bandung Barat":
             legend_title = "Klasifikasi Lahan Kabupaten Bandung Barat"
             legend_dict = {
-                'Awan': 'd6d6d6',
-                'Sawah': 'fffd0e',
-                'Lahan Terbangun': 'd90ee1',
-                'Hutan': '40d808',
-                'Badan Air': '276fff',
-                'Lahan Kosong Non-Vegetatif': 'c20000'}
+                'Awan': 'd63000',
+                'Sawah': '98ff00',
+                'Lahan Terbangun': '0b4a8b',
+                'Hutan': '188700',
+                'Badan Air': '00beff',
+                'Lahan Kosong Non-Vegetatif': 'bf04c2'}
             Map.add_legend(legend_title=legend_title, legend_dict=legend_dict, layer_name='Kab. Bandung Barat')
         
         elif region == "Kab. Purwakarta":
             legend_title = "Klasifikasi Lahan Kabupaten Purwakarta"
             legend_dict = {
-                'Awan': 'ff9999',
-                'Sawah': 'fbff95',
-                'Lahan Terbangun': '9999ff',
-                'Hutan': '75bca4',
-                'Badan Air': '99ffff',
-                'Lahan Kosong Non-Vegetatif': '0c19ff'}
+                'Awan': 'd63000',
+                'Sawah': '98ff00',
+                'Lahan Terbangun': '0b4a8b',
+                'Hutan': '188700',
+                'Badan Air': '00beff',
+                'Lahan Kosong Non-Vegetatif': 'bf04c2'}
             Map.add_legend(legend_title=legend_title, legend_dict=legend_dict, layer_name='Kab. Purwakarta')
 
     with row1_col2:
@@ -153,7 +153,7 @@ def Landsat():
 
             # Add the result of remote sensing classification map
             Map.addLayer(westBandung_raster, {'min': 0, 'max': 5,
-                                              'palette': ['#ff0000', '#00ff00', '#ffe600', '#8c9900', '#009999', '#ff00ff']},
+                                              'palette': ['#d63000', '#98ff00', '#0b4a8b' ,'#188700', '#00beff', '#bf04c2']},
                                               'Bandung Barat (Random Forest)')
         
         elif region == "Kab. Purwakarta":
@@ -184,12 +184,12 @@ def Landsat():
         if region == "Kab. Bandung Barat":
             legend_title = "Klasifikasi Lahan Kabupaten Bandung Barat"
             legend_dict = {
-                'Awan': 'ff0000',
-                'Sawah': '00ff00',
-                'Lahan Terbangun': 'ffe600',
-                'Hutan': '8c9900',
-                'Badan Air': '009999',
-                'Lahan Kosong Non-Vegetatif': 'ff00ff'}
+                'Awan': 'd63000',
+                'Sawah': '98ff00',
+                'Lahan Terbangun': '0b4a8b',
+                'Hutan': '188700',
+                'Badan Air': '00beff',
+                'Lahan Kosong Non-Vegetatif': 'bf04c2'}
             Map.add_legend(legend_title=legend_title, legend_dict=legend_dict, layer_name='Kab. Bandung Barat')
         
         elif region == "Kab. Purwakarta":
