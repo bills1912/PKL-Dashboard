@@ -151,7 +151,8 @@ def Landsat():
             Map.addLayer(RF_past, {'min':1, 'max': 6,
                                    'palette': ['#d63000', '#98ff00', '#0b4a8b' ,'#188700', '#00beff', '#bf04c2']},
                                    'Bandung Barat (Random Forest)')
-         elif regions == "Kab. Bandung Barat 2021":
+  
+       elif regions == "Kab. Bandung Barat 2021":
             Map.set_center(lat=-6.920803423087094, lon=107.4476469379034, zoom=10)
             ee_path = 'users/bills/Bandung_Barat'
             west_bandung = ee.FeatureCollection(ee_path)
@@ -174,7 +175,6 @@ def Landsat():
             Map.addLayer(westBandung_raster, {'min': 0, 'max': 5,
                                               'palette': ['#d63000', '#98ff00', '#0b4a8b' ,'#188700', '#00beff', '#bf04c2']},
                                               'Bandung Barat (Random Forest)')
-        
         elif regions == "Kab. Purwakarta":
             Map.set_center(lat=-6.5425, lon=107.4377, zoom=10)
             path_ee = 'users/bills/Purwakarta'
