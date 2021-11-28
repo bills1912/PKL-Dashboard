@@ -152,17 +152,16 @@ def Landsat():
                                    'palette': ['#d63000', '#98ff00', '#0b4a8b' ,'#188700', '#00beff', '#bf04c2']},
                                    'Bandung Barat (Random Forest)')
   
-       elif regions == "Kab. Bandung Barat 2021":
+        elif regions == "Kab. Bandung Barat 2021":
             Map.set_center(lat=-6.920803423087094, lon=107.4476469379034, zoom=10)
             ee_path = 'users/bills/Bandung_Barat'
             west_bandung = ee.FeatureCollection(ee_path)
             west_bandung = west_bandung.geometry()
-
             # Clip the map
             land8 = ee.ImageCollection(ee.ImageCollection('LANDSAT/LC08/C01/T1_SR')
-                         .filterDate('2021-01-01', '2021-11-01')
-                         .filterBounds(west_bandung)
-                         .sort('CLOUD_COVER', False)).mosaic().clip(west_bandung)
+                                         .filterDate('2021-01-01', '2021-11-01')
+                                         .filterBounds(west_bandung)
+                                         .sort('CLOUD_COVER', False)).mosaic().clip(west_bandung)
 
             # Add the raster map
             rf_raster = ee.Image('users/bills/Bandung_Barat_Land8_RF')
@@ -173,7 +172,7 @@ def Landsat():
 
             # Add the result of remote sensing classification map
             Map.addLayer(westBandung_raster, {'min': 0, 'max': 5,
-                                              'palette': ['#d63000', '#98ff00', '#0b4a8b' ,'#188700', '#00beff', '#bf04c2']},
+                                              'palette': ['#ff0000', '#00ff00', '#ffe600', '#8c9900', '#009999', '#ff00ff']},
                                               'Bandung Barat (Random Forest)')
         elif regions == "Kab. Purwakarta":
             Map.set_center(lat=-6.5425, lon=107.4377, zoom=10)
